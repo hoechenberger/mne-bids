@@ -5,8 +5,8 @@
 # License: BSD-3-Clause
 
 
-from mne_bids import BIDSPath, get_datatypes
-from mne_bids.config import EPHY_ALLOWED_DATATYPES
+from . import BIDSPath, get_datatypes
+from .config import EPHY_ALLOWED_DATATYPES
 
 
 def count_events(root_or_path, datatype='auto'):

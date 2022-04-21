@@ -23,14 +23,14 @@ from mne.utils import (
 from mne.coreg import fit_matched_points
 from mne.transforms import apply_trans
 
-from mne_bids.dig import _read_dig_bids
-from mne_bids.tsv_handler import _from_tsv, _drop
-from mne_bids.config import (ALLOWED_DATATYPE_EXTENSIONS,
-                             ANNOTATIONS_TO_KEEP,
-                             reader, _map_options)
-from mne_bids.utils import _get_ch_type_mapping, verbose
-from mne_bids.path import (BIDSPath, _parse_ext, _find_matching_sidecar,
-                           _infer_datatype, get_bids_path_from_fname)
+from .dig import _read_dig_bids
+from .tsv_handler import _from_tsv, _drop
+from .config import (ALLOWED_DATATYPE_EXTENSIONS,
+                     ANNOTATIONS_TO_KEEP,
+                     reader, _map_options)
+from .utils import _get_ch_type_mapping, verbose
+from .path import (BIDSPath, _parse_ext, _find_matching_sidecar,
+                   _infer_datatype, get_bids_path_from_fname)
 
 
 def _read_raw(raw_path, electrode=None, hsp=None, hpi=None,

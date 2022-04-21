@@ -18,8 +18,8 @@ from mne.utils import (
 from mne.io import read_fiducials
 from mne.io.constants import FIFF
 
-from mne_bids import BIDSPath
-from mne_bids.utils import _write_json
+from . import BIDSPath
+from .utils import _write_json
 
 
 # TODO: add support for tsv files

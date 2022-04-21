@@ -20,10 +20,10 @@ else:
     from mne.preprocessing import annotate_amplitude
     _annotate_flat_func = annotate_amplitude
 
-from mne_bids import read_raw_bids, mark_channels
-from mne_bids.read import _from_tsv, _read_events
-from mne_bids.write import _events_tsv
-from mne_bids.config import ALLOWED_DATATYPE_EXTENSIONS
+from . import read_raw_bids, mark_channels
+from .read import _from_tsv, _read_events
+from .write import _events_tsv
+from .config import ALLOWED_DATATYPE_EXTENSIONS
 
 
 @verbose

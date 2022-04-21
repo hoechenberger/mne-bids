@@ -19,14 +19,15 @@ from typing import Optional
 import numpy as np
 from mne.utils import warn, logger, _validate_type, verbose, _check_fname
 
-from mne_bids.config import (
+from .config import (
     ALLOWED_PATH_ENTITIES, ALLOWED_FILENAME_EXTENSIONS,
     ALLOWED_FILENAME_SUFFIX, ALLOWED_PATH_ENTITIES_SHORT,
     ALLOWED_DATATYPES, SUFFIX_TO_DATATYPE, ALLOWED_DATATYPE_EXTENSIONS,
     ALLOWED_SPACES,
-    reader, ENTITY_VALUE_TYPE)
-from mne_bids.utils import (_check_key_val, _check_empty_room_basename,
-                            param_regex, _ensure_tuple)
+    reader, ENTITY_VALUE_TYPE
+)
+from .utils import (_check_key_val, _check_empty_room_basename,
+                    param_regex, _ensure_tuple)
 
 
 def _find_matched_empty_room(bids_path):

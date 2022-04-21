@@ -19,15 +19,15 @@ from mne.utils import (logger, warn, _validate_type, _check_option,
                        has_nibabel, get_subjects_dir)
 from mne.io.pick import _picks_to_idx
 
-from mne_bids.config import (ALLOWED_SPACES, BIDS_COORDINATE_UNITS,
-                             MNE_TO_BIDS_FRAMES, BIDS_TO_MNE_FRAMES,
-                             MNE_FRAME_TO_STR, MNE_STR_TO_FRAME,
-                             BIDS_COORD_FRAME_DESCRIPTIONS,
-                             BIDS_STANDARD_TEMPLATE_COORDINATE_SYSTEMS)
-from mne_bids.tsv_handler import _from_tsv
-from mne_bids.utils import (_scale_coord_to_meters, _write_json, _write_tsv,
-                            verbose)
-from mne_bids.path import BIDSPath
+from .config import (ALLOWED_SPACES, BIDS_COORDINATE_UNITS,
+                     MNE_TO_BIDS_FRAMES, BIDS_TO_MNE_FRAMES,
+                     MNE_FRAME_TO_STR, MNE_STR_TO_FRAME,
+                     BIDS_COORD_FRAME_DESCRIPTIONS,
+                     BIDS_STANDARD_TEMPLATE_COORDINATE_SYSTEMS)
+from .tsv_handler import _from_tsv
+from .utils import (_scale_coord_to_meters, _write_json, _write_tsv,
+                    verbose)
+from .path import BIDSPath
 
 
 def _handle_electrodes_reading(electrodes_fname, coord_frame,

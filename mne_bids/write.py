@@ -34,29 +34,29 @@ from mne.utils import (check_version, has_nibabel, logger, warn, Bunch,
                        deprecated, ProgressBar)
 import mne.preprocessing
 
-from mne_bids.pick import coil_type
-from mne_bids.dig import _write_dig_bids, _write_coordsystem_json
-from mne_bids.utils import (_write_json, _write_tsv, _write_text,
-                            _age_on_date, _infer_eeg_placement_scheme,
-                            _get_ch_type_mapping, _check_anonymize,
-                            _stamp_to_dt, _handle_datatype)
-from mne_bids import (BIDSPath, read_raw_bids, get_anonymization_daysback,
-                      get_bids_path_from_fname)
-from mne_bids.path import _parse_ext, _mkdir_p, _path_to_str
-from mne_bids.copyfiles import (copyfile_brainvision, copyfile_eeglab,
-                                copyfile_ctf, copyfile_bti, copyfile_kit,
-                                copyfile_edf)
-from mne_bids.tsv_handler import (_from_tsv, _drop, _contains_row,
-                                  _combine_rows)
-from mne_bids.read import _find_matching_sidecar, _read_events
-from mne_bids.sidecar_updates import update_sidecar_json
+from .pick import coil_type
+from .dig import _write_dig_bids, _write_coordsystem_json
+from .utils import (_write_json, _write_tsv, _write_text,
+                    _age_on_date, _infer_eeg_placement_scheme,
+                    _get_ch_type_mapping, _check_anonymize,
+                    _stamp_to_dt, _handle_datatype)
+from . import (BIDSPath, read_raw_bids, get_anonymization_daysback,
+               get_bids_path_from_fname)
+from .path import _parse_ext, _mkdir_p, _path_to_str
+from .copyfiles import (copyfile_brainvision, copyfile_eeglab,
+                        copyfile_ctf, copyfile_bti, copyfile_kit,
+                        copyfile_edf)
+from .tsv_handler import (_from_tsv, _drop, _contains_row,
+                          _combine_rows)
+from .read import _find_matching_sidecar, _read_events
+from .sidecar_updates import update_sidecar_json
 
-from mne_bids.config import (ORIENTATION, UNITS, MANUFACTURERS,
-                             IGNORED_CHANNELS, ALLOWED_DATATYPE_EXTENSIONS,
-                             BIDS_VERSION, REFERENCES, _map_options, reader,
-                             ALLOWED_INPUT_EXTENSIONS, CONVERT_FORMATS,
-                             ANONYMIZED_JSON_KEY_WHITELIST,
-                             BIDS_STANDARD_TEMPLATE_COORDINATE_SYSTEMS)
+from .config import (ORIENTATION, UNITS, MANUFACTURERS,
+                     IGNORED_CHANNELS, ALLOWED_DATATYPE_EXTENSIONS,
+                     BIDS_VERSION, REFERENCES, _map_options, reader,
+                     ALLOWED_INPUT_EXTENSIONS, CONVERT_FORMATS,
+                     ANONYMIZED_JSON_KEY_WHITELIST,
+                     BIDS_STANDARD_TEMPLATE_COORDINATE_SYSTEMS)
 
 
 _FIFF_SPLIT_SIZE = '2GB'  # MNE-Python default; can be altered during debugging
